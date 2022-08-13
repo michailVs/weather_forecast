@@ -8,7 +8,7 @@ const WeatherItem = ({data}) => {
     const min = String(newTime.getMinutes()).length < 2 ? '0' + newTime.getMinutes() : newTime.getMinutes()
     const temp = Math.round(data.main.temp) >= 0 ? '+' + Math.round(data.main.temp) : Math.round(data.main.temp)
     const feelsLike = Math.round(data.main.feels_like) >= 0 ? '+' + Math.round(data.main.feels_like) : Math.round(data.main.feels_like)
-    const pressure = Math.round(data.main.grnd_level * 0.750063755419211)
+    const pressure = Math.round(data.main.grnd_level * 0.750063755419211) || Math.round(data.main.pressure * 0.750063755419211)
     return (
         <div>
             <h2>Город: {data.name}</h2>

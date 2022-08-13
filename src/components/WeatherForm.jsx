@@ -6,7 +6,6 @@ const WeatherForm = ({setData, setIsData}) => {
     const feachWeather = async (e) => {
         e.preventDefault()
         const {data} = await weather(city)
-        console.log(data)
         setCity('')
         setData(data)
         setIsData(true)
