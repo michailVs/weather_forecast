@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import WeatherForm from "./components/WeatherForm";
+import WeatherItem from "./components/WeatherItem";
 
 function App() {
+  const [data, setData] = useState({})
+  const [isData, setIsData] = useState(false)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <WeatherForm setData={setData} setIsData={setIsData}/>
+      {isData
+      ? <WeatherItem data={data}/>
+      : <h2>Введите город</h2>}
     </div>
   );
 }
