@@ -11,7 +11,7 @@ function App() {
       <WeatherForm setData={setData} setIsData={setIsData}/>
       {isData
       ? <WeatherItem data={data}/>
-      : <h2>Введите город</h2>}
+      : <h2 className="card" style={{display: 'flex', justifyContent: 'center'}}>Введите город</h2>}
     </div>
   );
 }
