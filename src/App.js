@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './styles/style.css'
 import WeatherForm from "./components/WeatherForm";
 import WeatherItem from "./components/WeatherItem";
 

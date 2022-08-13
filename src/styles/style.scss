@@ -1,0 +1,45 @@
+#root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.card {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(101, 139, 209, 0.172);
+    padding: 25px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+.form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    &__input {
+        margin-bottom: 100px;
+        padding: 20px;
+        border: 1px solid #000;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        font-family: sans-serif;
+        font-size: 16px;
+    }
+    &__btn {
+        padding: 20px;
+        border: 1px solid #000;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        font-family: sans-serif;
+        font-size: 16px;
+        height: 61px;
+        background-color: rgba(101, 139, 209, 0.172);
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        &:hover {
+            background-color: rgba(101, 139, 209, 0.536);
+            color: white;
+        }
+    }
+}

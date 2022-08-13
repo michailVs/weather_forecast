@@ -11,13 +11,14 @@ const WeatherForm = ({setData, setIsData}) => {
         setIsData(true)
     }
     return (
-        <form>
+        <form className='form'>
             <input type="text"
                 placeholder='Введите город'
                 value={city}
                 onChange={e => setCity(e.target.value)}
+                className='form__input'
             />
-            <button onClick={feachWeather}>Запросить погоду</button>
+            <button className='form__btn' onClick={feachWeather}>Запросить погоду</button>
         </form>
     )
 }
